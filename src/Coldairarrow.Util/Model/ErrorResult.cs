@@ -6,7 +6,7 @@
         {
             Msg = msg;
             Success = false;
-            ErrorCode = errorCode;
+            Code = errorCode;
         }
     }
 }

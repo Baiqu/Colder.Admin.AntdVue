@@ -429,5 +429,445 @@
             类型,菜单=0,页面=1,权限=2
             </summary>
         </member>
+        <member name="T:Coldairarrow.Entity.Configur_Manage.gax_config">
+            <summary>
+            gax_config
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Configur_Manage.gax_config.Id">
+            <summary>
+            雪花ID
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Configur_Manage.gax_config.confname">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Configur_Manage.gax_config.confvalue">
+            <summary>
+            配置內容，字符或是json
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Configur_Manage.gax_config.CreateTime">
+            <summary>
+            创建日期
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Configur_Manage.gax_config.CreatorId">
+            <summary>
+            创造者
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Configur_Manage.gax_config.notes">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Entity.Member_Manage.gax_membercard">
+            <summary>
+            gax_membercard
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Member_Manage.gax_membercard.Id">
+            <summary>
+            雪花ID
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Member_Manage.gax_membercard.memberid">
+            <summary>
+            会员卡ID
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Member_Manage.gax_membercard.title">
+            <summary>
+            会员名称
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Member_Manage.gax_membercard.notes">
+            <summary>
+            会员卡名称
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Member_Manage.gax_membercard.CreateTime">
+            <summary>
+            创建日期
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Member_Manage.gax_membercard.amount">
+            <summary>
+            单价
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Member_Manage.gax_membercard.mcycle">
+            <summary>
+            单位月份
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Member_Manage.gax_membercard.CreatorId">
+            <summary>
+            创作者
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Entity.Member_Manage.gax_memberpricelist">
+            <summary>
+            gax_memberpricelist
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Member_Manage.gax_memberpricelist.Id">
+            <summary>
+            雪花ID
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Member_Manage.gax_memberpricelist.memberid">
+            <summary>
+            会员卡ID
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Member_Manage.gax_memberpricelist.price">
+            <summary>
+            价格金额
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Member_Manage.gax_memberpricelist.quantity">
+            <summary>
+            会员卡数量
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Member_Manage.gax_memberpricelist.notes">
+            <summary>
+            描述内容
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Member_Manage.gax_memberpricelist.CreateTime">
+            <summary>
+            创建日期
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Member_Manage.gax_memberpricelist.CreatorId">
+            <summary>
+            创造者
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Entity.Ocelot_Manage.OcelotReRoutes">
+            <summary>
+            OcelotReRoutes
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Ocelot_Manage.OcelotReRoutes.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Ocelot_Manage.OcelotReRoutes.OcelotGlobalConfigurationId">
+            <summary>
+            OcelotGlobalConfigurationId
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Ocelot_Manage.OcelotReRoutes.UpstreamPathTemplate">
+            <summary>
+            UpstreamPathTemplate
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Ocelot_Manage.OcelotReRoutes.UpstreamHttpMethod">
+            <summary>
+            UpstreamHttpMethod
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Ocelot_Manage.OcelotReRoutes.UpstreamHost">
+            <summary>
+            UpstreamHost
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Ocelot_Manage.OcelotReRoutes.DownstreamScheme">
+            <summary>
+            DownstreamScheme
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Ocelot_Manage.OcelotReRoutes.DownstreamPathTemplate">
+            <summary>
+            DownstreamPathTemplate
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Ocelot_Manage.OcelotReRoutes.DownstreamHostAndPorts">
+            <summary>
+            DownstreamHostAndPorts
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Ocelot_Manage.OcelotReRoutes.AuthenticationOptions">
+            <summary>
+            AuthenticationOptions
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Ocelot_Manage.OcelotReRoutes.RequestIdKey">
+            <summary>
+            RequestIdKey
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Ocelot_Manage.OcelotReRoutes.CacheOptions">
+            <summary>
+            CacheOptions
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Ocelot_Manage.OcelotReRoutes.ServiceName">
+            <summary>
+            ServiceName
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Ocelot_Manage.OcelotReRoutes.QoSOptions">
+            <summary>
+            QoSOptions
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Ocelot_Manage.OcelotReRoutes.LoadBalancerOptions">
+            <summary>
+            LoadBalancerOptions
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Ocelot_Manage.OcelotReRoutes.Key">
+            <summary>
+            Key
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Ocelot_Manage.OcelotReRoutes.DelegatingHandlers">
+            <summary>
+            DelegatingHandlers
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Ocelot_Manage.OcelotReRoutes.Priority">
+            <summary>
+            Priority
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Ocelot_Manage.OcelotReRoutes.Timeout">
+            <summary>
+            Timeout
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Ocelot_Manage.OcelotReRoutes.IsStatus">
+            <summary>
+            IsStatus
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Ocelot_Manage.OcelotReRoutes.AddTime">
+            <summary>
+            AddTime
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Ocelot_Manage.OcelotReRoutes.CreateTime">
+            <summary>
+            CreateTime
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Ocelot_Manage.OcelotReRoutes.CreatorId">
+            <summary>
+            CreatorId
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Entity.Oper_Manage.gax_notify">
+            <summary>
+            gax_notify
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Oper_Manage.gax_notify.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Oper_Manage.gax_notify.senderid">
+            <summary>
+            管理员发布或为空
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Oper_Manage.gax_notify.title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Oper_Manage.gax_notify.content">
+            <summary>
+            公告内容
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Oper_Manage.gax_notify.createdat">
+            <summary>
+            创建日期
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Oper_Manage.gax_notify.url">
+            <summary>
+            详情内容网址
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Oper_Manage.gax_notify.imgurl">
+            <summary>
+            图片地址
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Oper_Manage.gax_notify.recipienter">
+            <summary>
+            如果空表示全體，或者是指定用戶ID
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Oper_Manage.gax_notify.haspublic">
+            <summary>
+            是否公開官方消息
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Oper_Manage.gax_notify.CreateTime">
+            <summary>
+            创建日期
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Oper_Manage.gax_notify.CreatorId">
+            <summary>
+            创造者
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Entity.Oper_Manage.gax_turntable_item">
+            <summary>
+            gax_turntable_item
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Oper_Manage.gax_turntable_item.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Oper_Manage.gax_turntable_item.mold">
+            <summary>
+            1=积分抽奖
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Oper_Manage.gax_turntable_item.type">
+            <summary>
+            1=GAX 2=算力 3=其他
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Oper_Manage.gax_turntable_item.amount">
+            <summary>
+            资金
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Oper_Manage.gax_turntable_item.scale">
+            <summary>
+            中奖率
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Oper_Manage.gax_turntable_item.CreateTime">
+            <summary>
+            创建日期
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Oper_Manage.gax_turntable_item.hasdelete">
+            <summary>
+            是否删除
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Oper_Manage.gax_turntable_item.name">
+            <summary>
+            奖品名称
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Oper_Manage.gax_turntable_item.CreatorId">
+            <summary>
+            创造者
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Entity.Oper_Manage.gax_turntable_userprize">
+            <summary>
+            gax_turntable_userprize
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Oper_Manage.gax_turntable_userprize.id">
+            <summary>
+            自动ID
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Oper_Manage.gax_turntable_userprize.userid">
+            <summary>
+            userid
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Oper_Manage.gax_turntable_userprize.turnid">
+            <summary>
+            转盘商品ID
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Oper_Manage.gax_turntable_userprize.haspull">
+            <summary>
+            是否领取
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Oper_Manage.gax_turntable_userprize.createtime">
+            <summary>
+            创建日期
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Entity.Users_Manage.gax_users">
+            <summary>
+            gax_users
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Users_Manage.gax_users.id">
+            <summary>
+            自增长数字
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Users_Manage.gax_users.userid">
+            <summary>
+            userid
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Users_Manage.gax_users.fundpassword">
+            <summary>
+            fundpassword
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Users_Manage.gax_users.headurl">
+            <summary>
+            headurl
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Users_Manage.gax_users.nick">
+            <summary>
+            nick
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Users_Manage.gax_users.sex">
+            <summary>
+            0=女 1=男
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Users_Manage.gax_users.usertypeid">
+            <summary>
+            用戶稱號
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Users_Manage.gax_users.invitecode">
+            <summary>
+            邀请码
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Users_Manage.gax_users.refuserid">
+            <summary>
+            推广用户ID
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Users_Manage.gax_users.created">
+            <summary>
+            創建日期
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Users_Manage.gax_users.usernumid">
+            <summary>
+            自動標識
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Users_Manage.gax_users.openarea">
+            <summary>
+            開戶地址
+            </summary>
+        </member>
     </members>
 </doc>

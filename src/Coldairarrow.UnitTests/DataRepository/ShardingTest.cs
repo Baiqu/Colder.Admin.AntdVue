@@ -18,7 +18,7 @@ namespace Coldairarrow.UnitTests
         {
             ShardingConfigBootstrapper.Bootstrap()
                 //添加数据源
-                .AddDataSource("BaseDb", DatabaseType.SqlServer, dbBuilder =>
+                .AddDataSource("BaseDb", DatabaseType.MySql, dbBuilder =>
                 {
                     //添加物理数据库
                     dbBuilder.AddPhsicDb("BaseDb", ReadWriteType.ReadAndWrite);

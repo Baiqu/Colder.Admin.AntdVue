@@ -74,5 +74,9 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\Member_Manage\" />
+  </ItemGroup>
+
 
 </Project>

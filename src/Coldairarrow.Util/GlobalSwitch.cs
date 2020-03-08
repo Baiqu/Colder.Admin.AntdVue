@@ -29,7 +29,7 @@ namespace Coldairarrow.Util
         /// <summary>
         /// 项目名
         /// </summary>
-        public const string ProjectName = "Colder.Admin.AntdVue";
+        public const string ProjectName = "GAX后台管理"; //"Colder.Admin.AntdVue";
 
         /// <summary>
         /// 网站根地址
@@ -81,7 +81,7 @@ namespace Coldairarrow.Util
         /// <summary>
         /// 默认数据库类型
         /// </summary>
-        public static readonly DatabaseType DatabaseType = DatabaseType.SqlServer;
+        public static readonly DatabaseType DatabaseType = DatabaseType.MySql;
 
         /// <summary>
         /// 默认数据库连接名

@@ -10,6 +10,12 @@ namespace Coldairarrow.Business.%areaName%
 {
     public class %entityName%Business : BaseBusiness<%entityName%>, I%entityName%Business, IDependency
     {
+
+        public %entityName%Business() : base("GaxDb")
+        {
+
+        }
+
         #region 外部接口
 
         public async Task<List<%entityName%>> GetDataListAsync(Pagination pagination, string condition, string keyword)

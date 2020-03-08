@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Coldairarrow.Util.Helper;
+using Newtonsoft.Json.Linq;
 
 namespace Coldairarrow.Util
 {
@@ -39,7 +40,29 @@ namespace Coldairarrow.Util
         /// <returns></returns>
         public static T GetPayload<T>(string token)
         {
-            return token.Split('.')[1].Base64UrlDecode().ToObject<T>();
+            var payloadString = token.Split('.')[1].Base64UrlDecode();
+            var listString = payloadString.Split(',');
+            if (listString.Length == 2)
+            {
+                return token.Split('.')[1].Base64UrlDecode().ToObject<T>();
+            }
+
+            //以下是Gax生成的Token
+            var expString = listString[2].Split(':')[1];
+            var expdate = DatetimeHelper.ConvertLongToDateTime(long.Parse(expString));
+
+            var userId = listString[1].Split(':')[2].ToObject<string>();
+            //{"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name":"+85269955818","http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier":"8e3a213e-125c-4597-b43c-3a58cc96ac6e","exp":1583633484,"iss":"AssetsChain_GAX_APP","aud":"https://api.assetschain.co"}
+
+            var result = Newtonsoft.Json.JsonConvert.SerializeObject(new JWTPayload
+            {
+                Expire = expdate,
+                UserId = userId
+            });
+
+            return result.ToObject<T>();
+
+            
         }
 
         /// <summary>

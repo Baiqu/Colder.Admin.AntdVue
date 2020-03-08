@@ -2208,6 +2208,13 @@
             <param name="nameOfCon">连接字符串名</param>
             <returns></returns>
         </member>
+        <member name="M:Coldairarrow.Util.Helper.DatetimeHelper.ConvertLongToDateTime(System.Int64)">
+            <summary>
+            10位的秒时间
+            </summary>
+            <param name="d"></param>
+            <returns></returns>
+        </member>
         <member name="T:Coldairarrow.Util.DbSearchHelper">
             <summary>
             数据库查询帮助类
@@ -3311,7 +3318,7 @@
             是否成功
             </summary>
         </member>
-        <member name="P:Coldairarrow.Util.AjaxResult.ErrorCode">
+        <member name="P:Coldairarrow.Util.AjaxResult.Code">
             <summary>
             错误代码
             </summary>

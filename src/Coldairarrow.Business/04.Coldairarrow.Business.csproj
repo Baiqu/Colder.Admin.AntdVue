@@ -42,4 +42,9 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="03IBusiness\Member_Manage\" />
+    <Folder Include="04Business\Member_Manage\" />
+  </ItemGroup>
+
 </Project>

@@ -110,7 +110,7 @@ namespace Coldairarrow.Api
             {
                 Success = false,
                 Msg = msg,
-                ErrorCode = errorCode
+                Code = errorCode
             };
 
             return JsonContent(res.ToJson());

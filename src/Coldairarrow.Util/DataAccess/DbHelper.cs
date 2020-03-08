@@ -260,6 +260,23 @@ namespace Coldairarrow.Util
                 string isKey = item.IsKey ? $@"
         [Key, Column(Order = {index + 1})]" : "";
                 Type type = DbTypeStr_To_CsharpType(item.Type);
+                var typeName = type.Name.ToLower();
+                //增加的处理类型
+                switch (type.Name)
+                {
+                    case "TimeSpan":
+                    case "DateTime":
+                    case "Guid":
+                    case "Int32":
+                    case "Int64":
+                        typeName = type.Name;
+                        break;
+
+                    case "Boolean":
+                        typeName = "bool";
+                        break;
+                }
+                
                 string isNullable = item.IsNullable && type.IsValueType ? "?" : "";
                 string description = item.Description.IsNullOrEmpty() ? item.Name : item.Description;
                 string newPropertyStr =
@@ -267,7 +284,7 @@ $@"
         /// <summary>
         /// {description}
         /// </summary>{isKey}
-        public {type.Name}{isNullable} {item.Name} {{ get; set; }}
+        public {typeName}{isNullable} {item.Name} {{ get; set; }}
 ";
                 properties += newPropertyStr;
             });

@@ -29,6 +29,7 @@ namespace Coldairarrow.Util
         {
             { "boolean",typeof(bool)},
             { "bit(1)",typeof(bool)},
+            { "bit",typeof(bool)},
             { "tinyint unsigned",typeof(byte)},
             { "binary",typeof(byte[])},
             { "varbinary",typeof(byte[])},
@@ -37,16 +38,18 @@ namespace Coldairarrow.Util
             { "datetime",typeof(DateTime)},
             { "double",typeof(double)},
             { "char(36)",typeof(Guid)},
-            { "smallint",typeof(Int16)},
-            { "int",typeof(Int32)},
-            { "bigint",typeof(Int64)},
-            { "tinyint",typeof(SByte)},
-            { "float",typeof(Single)},
+            { "smallint",typeof(int)},
+            { "int",typeof(int)},
+            { "bigint",typeof(long)},
+            { "tinyint",typeof(sbyte)},
+            { "float",typeof(float)},
             { "char",typeof(string)},
             { "varchar",typeof(string)},
             { "text",typeof(string)},
             { "longtext",typeof(string)},
-            { "time",typeof(TimeSpan)}
+            { "time",typeof(TimeSpan)},
+            { "decimal",typeof(decimal)},
+            { "numeric",typeof(decimal)}
         };
 
         #endregion

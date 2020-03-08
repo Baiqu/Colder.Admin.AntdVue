@@ -13,7 +13,7 @@
         /// <summary>
         /// 错误代码
         /// </summary>
-        public int ErrorCode { get; set; }
+        public int Code { get; set; }
 
         /// <summary>
         /// 返回消息
