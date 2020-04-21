@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using EFCore.Sharding;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data.Common;
@@ -15,9 +16,9 @@ namespace Coldairarrow.Util
         /// <summary>
         /// 构造函数
         /// </summary>
-        /// <param name="nameOrConStr">数据库连接名或连接字符串</param>
-        public MySqlHelper(string nameOrConStr)
-            : base(DatabaseType.MySql, nameOrConStr)
+        /// <param name="conString">完整连接字符串</param>
+        public MySqlHelper(string conString)
+            : base(DatabaseType.MySql, conString)
         {
         }
 
@@ -29,8 +30,7 @@ namespace Coldairarrow.Util
         {
             { "boolean",typeof(bool)},
             { "bit(1)",typeof(bool)},
-            { "bit",typeof(bool)},
-            { "tinyint unsigned",typeof(byte)},
+            { "tinyint unsigned",typeof(bool)},
             { "binary",typeof(byte[])},
             { "varbinary",typeof(byte[])},
             { "blob",typeof(byte[])},
@@ -38,11 +38,12 @@ namespace Coldairarrow.Util
             { "datetime",typeof(DateTime)},
             { "double",typeof(double)},
             { "char(36)",typeof(Guid)},
-            { "smallint",typeof(int)},
-            { "int",typeof(int)},
-            { "bigint",typeof(long)},
-            { "tinyint",typeof(sbyte)},
+            { "smallint",typeof(Int16)},
+            { "int",typeof(Int32)},
+            { "bigint",typeof(Int64)},
+            { "tinyint",typeof(bool)},
             { "float",typeof(float)},
+            { "decimal",typeof(decimal)},
             { "char",typeof(string)},
             { "varchar",typeof(string)},
             { "text",typeof(string)},
@@ -67,7 +68,7 @@ namespace Coldairarrow.Util
             string dbName = string.Empty;
             using (DbConnection conn = dbProviderFactory.CreateConnection())
             {
-                conn.ConnectionString = _conStr;
+                conn.ConnectionString = _conString;
                 dbName = conn.Database;
             }
             string sql = @"SELECT TABLE_NAME as TableName,table_comment as Description 
@@ -87,7 +88,7 @@ WHERE TABLE_SCHEMA = @dbName";
             string dbName = string.Empty;
             using (DbConnection conn = dbProviderFactory.CreateConnection())
             {
-                conn.ConnectionString = _conStr;
+                conn.ConnectionString = _conString;
                 dbName = conn.Database;
             }
 
@@ -96,7 +97,8 @@ WHERE TABLE_SCHEMA = @dbName";
 	a.DATA_TYPE as Type,
 	(a.COLUMN_KEY = 'PRI') as IsKey,
 	(a.IS_NULLABLE = 'YES') as IsNullable,
-	a.COLUMN_COMMENT as Description
+	a.COLUMN_COMMENT as Description,
+    a.ORDINAL_POSITION
 from information_schema.columns a 
 where table_name=@tableName and table_schema=@dbName
 ORDER BY a.ORDINAL_POSITION";

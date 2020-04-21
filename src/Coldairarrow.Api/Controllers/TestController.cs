@@ -1,7 +1,5 @@
-﻿using Coldairarrow.Business.Base_Manage;
-using Coldairarrow.DataRepository;
-using Coldairarrow.Entity.Base_Manage;
-using Coldairarrow.Util;
+﻿using Coldairarrow.Entity.Base_Manage;
+using EFCore.Sharding;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -13,54 +11,32 @@ namespace Coldairarrow.Api.Controllers
     [Route("/[controller]/[action]")]
     public class TestController : BaseController
     {
-        /// <summary>
-        /// 压力测试
-        /// </summary>
-        /// <returns></returns>
-        [HttpGet]
-        public async Task<AjaxResult> PressTest1()
+        readonly IRepository _repository;
+        public TestController(IRepository repository)
         {
-            var bus = AutofacHelper.GetScopeService<IBase_UserBusiness>();
-            using (var db = DbFactory.GetRepository())
-            {
-                Base_UnitTest data = new Base_UnitTest
-                {
-                    Id = Guid.NewGuid().ToString(),
-                    UserId = Guid.NewGuid().ToString(),
-                    Age = 10,
-                    UserName = Guid.NewGuid().ToString()
-                };
-                await db.InsertAsync(data);
-                db.Update(data);
-                db.GetIQueryable<Base_UnitTest>().FirstOrDefault();
-                db.Delete(data);
-            }
-
-            return new AjaxResult { Success = true };
+            _repository = repository;
         }
 
-        /// <summary>
-        /// 压力测试
-        /// </summary>
-        /// <returns></returns>
         [HttpGet]
-        public async Task PressTest2()
+        public async Task PressTest()
         {
-            var bus = AutofacHelper.GetScopeService<IBase_UserBusiness>();
-            using (var db = DbFactory.GetRepository())
+            Base_User base_User = new Base_User
             {
-                Base_UnitTest data = new Base_UnitTest
-                {
-                    Id = Guid.NewGuid().ToString(),
-                    UserId = Guid.NewGuid().ToString(),
-                    Age = 10,
-                    UserName = Guid.NewGuid().ToString()
-                };
-                await db.InsertAsync(data);
-                await db.UpdateAsync(data);
-                await db.GetIQueryable<Base_UnitTest>().FirstOrDefaultAsync();
-                await db.DeleteAsync(data);
-            }
+                Id = Guid.NewGuid().ToString(),
+                Birthday = DateTime.Now,
+                CreateTime = DateTime.Now,
+                CreatorId = Guid.NewGuid().ToString(),
+                DepartmentId = Guid.NewGuid().ToString(),
+                Password = Guid.NewGuid().ToString(),
+                RealName = Guid.NewGuid().ToString(),
+                Sex = Sex.Man,
+                UserName = Guid.NewGuid().ToString()
+            };
+
+            await _repository.InsertAsync(base_User);
+            await _repository.UpdateAsync(base_User);
+            await _repository.GetIQueryable<Base_User>().Where(x => x.Id == base_User.Id).FirstOrDefaultAsync();
+            await _repository.DeleteAsync(base_User);
         }
     }
 }
